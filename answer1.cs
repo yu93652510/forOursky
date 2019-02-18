@@ -4,8 +4,8 @@ public class Program
 {
 	public static void Main()
 	{
-		string[] array1 = { "A", "C","D","A"};
-		string[] array2 = {"C","X","C"};
+		char[] array1 = {'A', 'C', 'D', 'A'};
+		char[] array2 = {'C', 'X', 'C'};
 		if (isSubset(array1,array2)){
 			Console.WriteLine("true");
 		}else{
@@ -13,7 +13,7 @@ public class Program
 		}
 	}
 	
-	static bool isSubset(string[] arr1, string[] arr2){
+	static bool isSubset(char[] arr1, char[] arr2){
 		int arr1Length = arr1.Length;
 		int arr2Length = arr2.Length;
 		
