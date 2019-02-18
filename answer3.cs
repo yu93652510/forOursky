@@ -19,19 +19,24 @@ public class Program
 		return f2;		
 	}
 	
-	public static int NextFiboNumber(int c){
-		for (int i = 0; i < c ; i++){
-			if (FiboNumber(i) > c){
-				return FiboNumber(i);
-				}
-		}
-		return -1;
+	public static int[] NextFiboNumber(int[] c){
+		int[] answer = new int[c.Length];
+		for (int j = 0; j < c.Length; j++){
+			for (int i = 0; i < c[j] ; i++){
+				if (FiboNumber(i) > c[j]){
+					answer.SetValue(FiboNumber(i),j);
+					Console.WriteLine(answer[j]);
+					break;
+					}
+			}
+		} 
+		return answer;
 	}
 	
 	public static void Main(){
 	
-		int c = 1000; // input the number here
-		Console.WriteLine(NextFiboNumber(c));
+		int[] c = {19,55,21,1000}; // input the array here
+		NextFiboNumber(c);
 		
 	}
 
