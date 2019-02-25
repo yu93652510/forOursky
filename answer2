@@ -1,0 +1,2 @@
+The computational complexity of the question 1 programme should be O(n).
+Since the data set size increase by 1, the algorithm will run 1 more times.
